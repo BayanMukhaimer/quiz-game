@@ -211,17 +211,37 @@ const questions = {
         choices: ["James Bond", "Fast & Furious", "Jason Bourne", "Mission: Impossible"],
         answer: "Mission: Impossible"
         },
-    {
-        question: '',
-        choices: ["", "", "", ""],
-        answer: ""
+        {
+            question: 'What is the name of the wizarding school in Harry Potter?',
+            choices: ["Durmstrang", "Beauxbatons", "Hogwarts", "Ilvermorny"],
+            answer: "Hogwarts"
         },
     {
-        question: 'What is the name of the wizarding school in Harry Potter?',
-        choices: ["Durmstrang", "Beauxbatons", "Hogwarts", "Ilvermorny"],
-        answer: "Hogwarts"
-        }
-  ]
+    sound: "assest\pirates-of-the-caribbean.mp3",
+    question: 'This music is from which movie series?',
+    choices: ["The Chronicles of Narnia", "Fantastic Beasts", "Pirates of The Caribbian", "Twilight"],
+    answer: ""
+    }
+    ]
 };
+
+
+let currentCategory = "";
+let currentQuestionIndex = 0;
+let score = 0;
+let selected = false;
+
+const correctSound = document.getElementById("correctSound");
+const wrongSound = document.getElementById("wrongSound");
+const finishSound = document.getElementById("finishSound");
+
+function startQuiz(category) {
+  currentCategory = category;
+  currentQuestionIndex = 0;
+  score = 0;
+  document.getElementById("category-select").classList.add("hidden");
+  document.getElementById("quiz").classList.remove("hidden");
+  showQuestion();
+}
 
 
