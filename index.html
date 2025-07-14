@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiziverse 🧠</h1>
+    
+    <div id="category-select">
+      <h2>Select a Category</h2>
+      <button onclick="startQuiz('Science')"> Science🔬</button>
+      <button onclick="startQuiz('History')"> History📜</button>
+      <button onclick="startQuiz('Sports')">Sports ⚽</button>
+      <button onclick="startQuiz('Movies')">Movies 🎬</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+      <h2 id="question-text"></h2>
+      <div id="choices"></div>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+      <p id="score">Score: 0</p>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="correctSound" src="audio/correct.mp3"></audio>
+  <audio id="wrongSound" src="audio/wrong.mp3"></audio>
+  <audio id="finishSound" src="audio/finish.mp3"></audio>
+
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
