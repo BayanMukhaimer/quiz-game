@@ -263,3 +263,47 @@ function showQuestion() {
   document.getElementById("score").innerText = `Score: ${score}`;
 }
 
+
+function checkAnswer(button, selectedChoice) {
+  if (selected) return;
+  selected = true;
+
+  const questionObj = questions[currentCategory][currentQuestionIndex];
+  const buttons = document.querySelectorAll("#choices button");
+
+  if (selectedChoice === questionObj.answer) {
+    button.style.backgroundColor = "green";
+    correctSound.play();
+    score++;
+  } else {
+    button.style.backgroundColor = "red";
+    wrongSound.play();
+    buttons.forEach(btn => {
+      if (btn.innerText === questionObj.answer) {
+        btn.style.backgroundColor = "green";
+      }
+    });
+  }
+    document.getElementById("score").innerText = `Score: ${score}`;
+
+}
+
+
+function nextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions[currentCategory].length) {
+    showQuestion();
+  } else {
+    finishSound.play();
+    setTimeout(() => {
+      alert(`🎉 Quiz Completed!\nFinal Score: ${score}/${questions[currentCategory].length}`);
+      location.reload();
+    }, 500);
+  }
+}
+
+
+
+
+
+
