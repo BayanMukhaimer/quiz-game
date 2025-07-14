@@ -247,11 +247,30 @@ function startQuiz(category) {
 
 function showQuestion() {
   const questionObj = questions[currentCategory][currentQuestionIndex];
-  document.getElementById("question-text").innerText = questionObj.question;
-
+  const questionTextEl = document.getElementById("question-text");
   const choicesContainer = document.getElementById("choices");
-  choicesContainer.innerHTML = "";
+  const imageEl = document.getElementById("question-image"); // get image element
+  const audioEl = document.getElementById("question-sound"); // get sound element
   selected = false;
+
+  questionTextEl.innerText = questionObj.question;
+  choicesContainer.innerHTML = "";
+
+  if (questionObj.image) {
+    imageEl.src = questionObj.image;
+    imageEl.style.display = "block";
+  } else {
+    imageEl.style.display = "none";
+  }
+
+
+  if (questionObj.sound) {
+    audioEl.src = questionObj.sound;
+    audioEl.play();
+  } else {
+    audioEl.pause();
+    audioEl.currentTime = 0;
+  }
 
   questionObj.choices.forEach(choice => {
     const button = document.createElement("button");
