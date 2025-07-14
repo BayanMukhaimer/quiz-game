@@ -245,3 +245,21 @@ function startQuiz(category) {
 }
 
 
+function showQuestion() {
+  const questionObj = questions[currentCategory][currentQuestionIndex];
+  document.getElementById("question-text").innerText = questionObj.question;
+
+  const choicesContainer = document.getElementById("choices");
+  choicesContainer.innerHTML = "";
+  selected = false;
+
+  questionObj.choices.forEach(choice => {
+    const button = document.createElement("button");
+    button.innerText = choice;
+    button.onclick = () => checkAnswer(button, choice);
+    choicesContainer.appendChild(button);
+  });
+
+  document.getElementById("score").innerText = `Score: ${score}`;
+}
+
