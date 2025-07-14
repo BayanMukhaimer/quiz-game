@@ -165,5 +165,63 @@ const questions = {
         answer: "Spa-Francorchamps"
         }
     
+  ],
+
+    Movies: [
+    {
+        question: 'Which movie is set in the fictional city of Metroville?',
+        choices: ["The Incredibles", "Cars", "Toy Story", "Finding Nemo"],
+        answer: "The Incredibles"
+        },
+    {
+        sound: "assest\woody.mp3",
+        question: 'Who voiced the character of Woody in Toy Story?',
+        choices: ["Tim Allen", "Tom Hanks", "Robin Williams", "Johnny Depp"],
+        answer: "Tom Hanks"
+        },
+    {
+        question: 'Which Marvel Cinematic Universe movie would be first if you watched them in chronological order?',
+        choices: ["Captain America", "Iron Man", "Thor", "The Incredible Hulk"],
+        answer: "Captain America"
+        },
+    {
+        question: 'Who has the ability to calm the Hulk down in the Marvel Cinematic Universe?',
+        choices: ["", "Black Widow", "", ""],
+        answer: "Black Widow"
+        },
+    {
+        question: 'Which capital city appears in the title of the 3rd movie The Fast and Furious franchise?',
+        choices: ["Rome", "Miami", "Rio", "Tokyo"],
+        answer: "Tokyo"
+        },
+    {
+        image: "assest\goblin.jpg",
+        question: 'This character is from which movie series?',
+        choices: ["Star Wars", "Marvel", "Harry Potter", "Lord of the Rings"],
+        answer: "Harry Potter"
+        },
+    {
+        question: 'What is the highest-grossing film of all time?',
+        choices: ["Avatar", "Avengers: Endgame", "Titanic", "The Lion King"],
+        answer: "Avatar"
+        },
+    {
+        sound: "assest\mission-impossible.mp3",
+        question: 'Which movie franchise uses this music?',
+        choices: ["James Bond", "Fast & Furious", "Jason Bourne", "Mission: Impossible"],
+        answer: "Mission: Impossible"
+        },
+    {
+        question: '',
+        choices: ["", "", "", ""],
+        answer: ""
+        },
+    {
+        question: 'What is the name of the wizarding school in Harry Potter?',
+        choices: ["Durmstrang", "Beauxbatons", "Hogwarts", "Ilvermorny"],
+        answer: "Hogwarts"
+        }
   ]
 };
+
+
