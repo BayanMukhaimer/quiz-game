@@ -11,9 +11,10 @@ const questions = {
       answer: "Mars"
     },
     {
+        image:"assest/Cell-structure.jpg",
       question: "Which part of the cell contains genetic material?",
-      choices: ["Newton", "Joule", "Watt", "Pascal"],
-      answer: "Newton"
+      choices: ["Plasma membrane", "Nucleus", "Chloroplast", "Mitochondria"],
+      answer: "Nucleus"
     },
     {
       question: "Which of the following is not a vector quantity?",
@@ -21,7 +22,7 @@ const questions = {
       answer: "Temperature"
     },
     {
-        sound: "assest\volcano_d4RRnaNI.wav",
+        sound: "assest/volcano_d4RRnaNI.wav",
       question: "What natural phenomenon is producing this sound?",
       choices: ["Earthquake", "Thunderstorm", "Volcano", "Waterfall"],
       answer: "Volcano"
@@ -37,7 +38,7 @@ const questions = {
       answer: "Newton"
     },
     {
-        image: "assest\Human_skeleton_front_en.svg.png",
+        image: "assest/Human_skeleton_front_en.svg.png",
       question: "What is the longest bone in the human body?",
       choices: ["Humerus", "Femur", "Tibia", "Radius"],
       answer: "Femur"
@@ -48,7 +49,7 @@ const questions = {
       answer: "Au"
     },
     {
-        image: "assest\earthLayers.jpg",
+        image: "assest/earthLayers.jpg",
       question: "What is the outermost layer of the Earth called?",
       choices: ["Mantle", "Core", "Crust", "Lithosphere"],
       answer: "Crust"
@@ -81,7 +82,7 @@ const questions = {
       answer: "Christopher Columbus"
     },
     {
-        image: "assest\hiroshima.jpg",
+        image: "assest/hiroshima.jpg",
       question: "What event is depicted in this image?",
       choices: ["The Battle of Britain", "The bombing of Pearl Harbor", "The dropping of the atomic bomb on Hiroshima", "The D-Day landings "],
       answer: "The dropping of the atomic bomb on Hiroshima"
@@ -97,7 +98,7 @@ const questions = {
       answer: "Cleopatra"
     },
     {
-        image: "assest\Hadrians-Wal.jpg",
+        image: "assest/Hadrians-Wal.jpg",
       question: "Which historical structure is shown in the image?",
       choices: ["Berlin Wall", "Great Wall of China", "Hadrian's Wall", "Western Wall"],
       answer: "Hadrian's Wall"
@@ -121,13 +122,13 @@ const questions = {
       answer: "The Jules Rimet Trophy"
     },
     {
-        image: "assest\Simone_Biles.jpg",
+        image: "assest/Simone_Biles.jpg",
       question: "Identify the athlete in the image.",
       choices: ["Michael Phelps", "Usain Bolt", "Simone Biles", "Nadia Comăneci"],
       answer: "Simone Biles"
     },
     {
-        sound: "assest\Official NBA Whistle SFX.mp3",
+        sound: "assest/Official NBA Whistle SFX.mp3",
       question: "Which sport typically begins with a whistle?",
       choices: ["Golf", "Basketball", "Chess", "Snooker"],
       answer: "Basketball"
@@ -138,12 +139,13 @@ const questions = {
       answer: "Michael Phelps"
     },
     {
-        image: "assest\Italy_Circuit.avif",
+        image: "assest/Italy_Circuit.avif",
       question: 'Which circuit is known as the "Temple of Speed" due to its high average lap speeds?',
       choices: ["Silverstone", "Monza", "Spa-Francorchamps", "Suzuka"],
       answer: "Monza"
     },
       {
+        sound: "assest/tennis-sound.mp3",
           question: "Which sport does this sound resemble (grunts and racket hit)?",
           choices: ["Badminton", "Baseball", "Tennis", "Hockey"],
           answer: "Tennis"
@@ -159,7 +161,7 @@ const questions = {
             answer: "Sumo wrestling"
         },
         {
-        image: "assest\Belgium_Circuit.avif",
+        image: "assest/Belgium_Circuit.avif",
         question: 'Which of these circuits is known for its challenging "Eau Rouge" corner?',
         choices: ["Silverstone", "Monza", "Spa-Francorchamps", "Suzuka"],
         answer: "Spa-Francorchamps"
@@ -174,7 +176,7 @@ const questions = {
         answer: "The Incredibles"
         },
     {
-        sound: "assest\woody.mp3",
+        sound: "assest/woody.mp3",
         question: 'Who voiced the character of Woody in Toy Story?',
         choices: ["Tim Allen", "Tom Hanks", "Robin Williams", "Johnny Depp"],
         answer: "Tom Hanks"
@@ -186,7 +188,7 @@ const questions = {
         },
     {
         question: 'Who has the ability to calm the Hulk down in the Marvel Cinematic Universe?',
-        choices: ["", "Black Widow", "", ""],
+        choices: ["Captain America", "Black Widow", "Spaider Man", "Iron Man"],
         answer: "Black Widow"
         },
     {
@@ -195,7 +197,7 @@ const questions = {
         answer: "Tokyo"
         },
     {
-        image: "assest\goblin.jpg",
+        image: "assest/goblin.jpg",
         question: 'This character is from which movie series?',
         choices: ["Star Wars", "Marvel", "Harry Potter", "Lord of the Rings"],
         answer: "Harry Potter"
@@ -206,7 +208,7 @@ const questions = {
         answer: "Avatar"
         },
     {
-        sound: "assest\mission-impossible.mp3",
+        sound: "assest/mission-impossible.mp3",
         question: 'Which movie franchise uses this music?',
         choices: ["James Bond", "Fast & Furious", "Jason Bourne", "Mission: Impossible"],
         answer: "Mission: Impossible"
@@ -217,10 +219,10 @@ const questions = {
             answer: "Hogwarts"
         },
     {
-    sound: "assest\pirates-of-the-caribbean.mp3",
+    sound: "assest/pirates-of-the-caribbean.mp3",
     question: 'This music is from which movie series?',
     choices: ["The Chronicles of Narnia", "Fantastic Beasts", "Pirates of The Caribbian", "Twilight"],
-    answer: ""
+    answer: "Pirates of The Caribbian"
     }
     ]
 };
@@ -249,8 +251,8 @@ function showQuestion() {
   const questionObj = questions[currentCategory][currentQuestionIndex];
   const questionTextEl = document.getElementById("question-text");
   const choicesContainer = document.getElementById("choices");
-  const imageEl = document.getElementById("question-image"); // get image element
-  const audioEl = document.getElementById("question-sound"); // get sound element
+  const imageEl = document.getElementById("question-image"); 
+  const audioEl = document.getElementById("question-sound"); 
   selected = false;
 
   questionTextEl.innerText = questionObj.question;
