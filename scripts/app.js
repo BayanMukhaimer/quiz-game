@@ -341,14 +341,28 @@ function nextQuestion() {
   } else {
     finishSound.play();
     setTimeout(() => {
-      alert(`🎉 Quiz Completed!\nFinal Score: ${score}/${questions[currentCategory].length}`);
-      location.reload();
+      showResultPopup();
     }, 500);
   }
 }
 
 
+function showResultPopup() {
+  const popup = document.getElementById("result-popup");
+  const finalScore = document.getElementById("final-score");
+  const resultTitle = document.getElementById("result-title");
 
+  const total = questions[currentCategory].length;
+
+  if (score >= 6) {
+    resultTitle.innerText = "🎉 You Win!";
+  } else {
+    resultTitle.innerText = "❌ You Lose!";
+  }
+
+  finalScore.innerText = `Your final score: ${score} / ${total}`;
+  popup.classList.remove("hidden");
+}
 
 
 

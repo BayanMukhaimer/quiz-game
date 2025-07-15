@@ -90,3 +90,16 @@ button:hover {
       cursor: pointer;
       width: 300px;
     }
+
+
+  #result-title {
+    font-size: 1.8rem;
+  }
+
+  #result-title.win {
+    color: green;
+  }
+
+  #result-title.lose {
+    color: red;
+  }
