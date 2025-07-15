@@ -237,6 +237,25 @@ const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
 const finishSound = document.getElementById("finishSound");
 
+const model = document.getElementById("instructions");
+  const img = document.getElementById("gameImage");
+  const span = document.querySelector(".close");
+
+  img.onclick = function() {
+    model.style.display = "block";
+  }
+
+  span.onclick = function() {
+    model.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == model) {
+      model.style.display = "none";
+    }
+  }
+  
+
 function startQuiz(category) {
   currentCategory = category;
   currentQuestionIndex = 0;
@@ -245,7 +264,6 @@ function startQuiz(category) {
   document.getElementById("quiz").classList.remove("hidden");
   showQuestion();
 }
-
 
 function showQuestion() {
   const questionObj = questions[currentCategory][currentQuestionIndex];
