@@ -365,4 +365,7 @@ function showResultPopup() {
 }
 
 
+function closePopup() {
+  location.reload(); 
+}
 
