@@ -232,6 +232,8 @@ let currentCategory = "";
 let currentQuestionIndex = 0;
 let score = 0;
 let selected = false;
+let timerInterval;
+let timeLeft = 15;
 
 const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
@@ -301,6 +303,7 @@ function showQuestion() {
   });
 
   document.getElementById("score").innerText = `Score: ${score}`;
+  startTimer();
 }
 
 function playQuestionSound() {
@@ -312,6 +315,7 @@ function playQuestionSound() {
 function checkAnswer(button, selectedChoice) {
   if (selected) return;
   selected = true;
+  clearInterval(timerInterval);
 
   const questionObj = questions[currentCategory][currentQuestionIndex];
   const buttons = document.querySelectorAll("#choices button");
@@ -344,6 +348,23 @@ function nextQuestion() {
       showResultPopup();
     }, 500);
   }
+}
+
+
+function startTimer() {
+  clearInterval(timerInterval);
+  timeLeft = 15;
+  document.getElementById("time").innerText = timeLeft;
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    document.getElementById("time").innerText = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      nextQuestion();
+    }
+  }, 1000);
 }
 
 
