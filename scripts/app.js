@@ -90,7 +90,7 @@ const questions = {
     {
       question: "What event is considered the start of the French Revolution?",
       choices: ["Execution of King Louis XVI", "Declaration of the Rights of Man", "Storming of the Bastille", "Reign of Terror"],
-      answer: " Storming of the Bastille"
+      answer: "Storming of the Bastille"
     },
     {
       question: "Who was the famous queen of ancient Egypt known for her beauty and alliance with Rome?",
