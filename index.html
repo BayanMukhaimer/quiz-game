@@ -30,7 +30,9 @@
     </div>
 
     <div id="quiz" class="hidden">
-        <p id="timer">Time left: <span id="time">15</span>s</p>
+    <p id="timer">Time left: <span id="time">15</span>s</p>
+    <p id="times-up" class="hidden" style="color: red; font-weight: bold;">⏰ Time’s up!</p>
+    
   <h2 id="question-text"></h2>
   <img id="question-image" src="" style="max-width: 300px; display: none;" />
   <button id="play-sound-btn" onclick="playQuestionSound()" style="display: none;">🔊 Play Sound</button>
@@ -52,6 +54,8 @@
   <audio id="correctSound" src="assest/correct.mp3"></audio>
   <audio id="wrongSound" src="assest/wrong-one.ogg"></audio>
   <audio id="finishSound" src="assest/The end - SOUND EFFECT -.mp3"></audio>
+  <audio id="timeoutSound" src="assest/times-up-sound.mp3"></audio>
+
 
 
   <script src="scripts/app.js"></script>

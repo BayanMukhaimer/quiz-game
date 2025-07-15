@@ -238,6 +238,8 @@ let timeLeft = 15;
 const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
 const finishSound = document.getElementById("finishSound");
+const timeoutSound = document.getElementById("timeoutSound");
+
 
 const model = document.getElementById("instructions");
   const img = document.getElementById("gameImage");
@@ -355,6 +357,7 @@ function startTimer() {
   clearInterval(timerInterval);
   timeLeft = 15;
   document.getElementById("time").innerText = timeLeft;
+  document.getElementById("times-up").classList.add("hidden");
 
   timerInterval = setInterval(() => {
     timeLeft--;
@@ -362,7 +365,13 @@ function startTimer() {
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      nextQuestion();
+      timeoutSound.play();
+      document.getElementById("times-up").classList.remove("hidden");
+
+      setTimeout(() => {
+        document.getElementById("times-up").classList.add("hidden");
+        nextQuestion();
+      }, 2000);
     }
   }, 1000);
 }
