@@ -270,7 +270,8 @@ function showQuestion() {
   const questionTextEl = document.getElementById("question-text");
   const choicesContainer = document.getElementById("choices");
   const imageEl = document.getElementById("question-image"); 
-  const audioEl = document.getElementById("question-sound"); 
+  const audioEl = document.getElementById("question-sound");
+  const playBtn = document.getElementById("play-sound-btn");
   selected = false;
 
   questionTextEl.innerText = questionObj.question;
@@ -285,12 +286,12 @@ function showQuestion() {
 
 
   if (questionObj.sound) {
-    audioEl.src = questionObj.sound;
-    audioEl.play();
-  } else {
-    audioEl.pause();
-    audioEl.currentTime = 0;
-  }
+  audioEl.src = questionObj.sound;
+  playBtn.style.display = "inline-block";
+    } else {
+  audioEl.src = "";
+  playBtn.style.display = "none";
+    }
 
   questionObj.choices.forEach(choice => {
     const button = document.createElement("button");
@@ -300,6 +301,11 @@ function showQuestion() {
   });
 
   document.getElementById("score").innerText = `Score: ${score}`;
+}
+
+function playQuestionSound() {
+  const audioEl = document.getElementById("question-sound");
+  audioEl.play();
 }
 
 

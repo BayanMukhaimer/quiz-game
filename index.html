@@ -32,13 +32,14 @@
     <div id="quiz" class="hidden">
   <h2 id="question-text"></h2>
   <img id="question-image" src="" style="max-width: 300px; display: none;" />
+  <button id="play-sound-btn" onclick="playQuestionSound()" style="display: none;">🔊 Play Sound</button>
   <audio id="question-sound"></audio>
   <div id="choices"></div>
   <button id="next-btn" onclick="nextQuestion()">Next</button>
   <p id="score">Score: 0</p>
 </div>
 
-  <!-- Audio -->
+
   <audio id="correctSound" src="assest/correct.mp3"></audio>
   <audio id="wrongSound" src="assest/wrong-one.ogg"></audio>
   <audio id="finishSound" src="assest/The end - SOUND EFFECT -.mp3"></audio>
