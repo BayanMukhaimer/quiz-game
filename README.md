@@ -147,6 +147,14 @@ function showResultPopup() {
 - **Scoring Logic:** Ensuring the result box showed the correct win/lose message based on score required conditional logic within the end alert function.
 
 
+## Next Steps
+
+- Add local score saving with localStorage
+- Add multiplayer functionality
+- Animate screen transitions
+- Make fully responsive for mobile/tablet
+- Expand question bank per category
+
 
 ##  In Conclusion
 
