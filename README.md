@@ -44,7 +44,13 @@ Create an engaging, multi-category quiz game using only HTML, CSS, and JavaScrip
 - JavaScript ES6  
 - Git & GitHub
 
+## Getting Started
 
+### Play the Game
+ [Play Quiziverse](https://bayanmukhaimer.github.io/quiz-game/)
+
+### View Planning Materials
+ [View Planning Docs](https://docs.google.com/document/d/1k_8He0Kur0-CWs5kpp42PcF9tIY0W8V1/edit?usp=drive_link&ouid=102468051930964477070&rtpof=true&sd=true)
 
 ## Game Design
 <img width="1920" height="909" alt="image" src="https://github.com/user-attachments/assets/bf6f6ba7-aad4-4577-adca-8afb0f0dcfc6" />
