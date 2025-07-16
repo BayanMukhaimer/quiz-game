@@ -10,18 +10,18 @@ Quiziverse is a fast-paced, browser-based quiz game built as part of my Front-En
 
 ## Contents
 
-- [Introduction](#-introduction)  
-- [Contents](#-contents)  
-- [Project Brief](#-project-brief)  
-- [Technologies](#-technologies)  
-- [Game Design](#-game-design)  
-- [Audio Controls](#-audio-controls)  
-- [Question Timer](#-question-timer)  
-- [Scoring System](#-scoring-system)  
-- [Winning and Losing](#-winning-and-losing)  
-- [User Instructions](#-user-instructions)  
-- [Challenges & Learnings](#-challenges--learnings)  
-- [In Conclusion](#-in-conclusion)
+- [Introduction](#introduction)  
+- [Contents](#contents)  
+- [Project Brief](#project-brief)  
+- [Technologies](#technologies)  
+- [Game Design](#game-design)  
+- [Audio Controls](#audio-controls)  
+- [Question Timer](#question-timer)  
+- [Scoring System](#scoring-system)  
+- [Winning and Losing](#winning-and-losing)  
+- [User Instructions](#user-instructions)  
+- [Challenges & Learnings](#challenges--learnings)  
+- [In Conclusion](#in-conclusion)
 
 
 
